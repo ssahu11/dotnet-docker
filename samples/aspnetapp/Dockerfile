@@ -8,14 +8,14 @@ WORKDIR /source
 COPY . .
 RUN dir
 RUN cd samples/aspnetapp/
-RUN dir samples/aspnetapp/
+#RUN dir samples/aspnetapp/
 #WORKDIR /source/
 
 #COPY *.sln .
 #COPY aspnetapp/*.csproj ./aspnetapp/
 #RUN dotnet restore
 #RUN cd //aspnetapp
-COPY ./aspnetapp/*.csproj .
+#COPY ./aspnetapp/*.csproj .
 RUN dotnet restore --use-current-runtime  
 
 # copy everything else and build app
