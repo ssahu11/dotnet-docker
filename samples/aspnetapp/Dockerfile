@@ -5,7 +5,7 @@ WORKDIR /source
 
 # copy csproj and restore as distinct layers
 #COPY . .
-#RUN dir
+RUN dir
 #WORKDIR /source/
 
 #COPY *.sln .
