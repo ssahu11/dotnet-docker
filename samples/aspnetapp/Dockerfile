@@ -8,12 +8,12 @@ WORKDIR /source
 #RUN dir
 #WORKDIR /source/
 
-COPY *.sln .
-COPY aspnetapp/*.csproj ./aspnetapp/
-RUN dotnet restore
+#COPY *.sln .
+#COPY aspnetapp/*.csproj ./aspnetapp/
+#RUN dotnet restore
 #RUN cd //aspnetapp
-#COPY ./aspnetapp/*.csproj .
-#RUN dotnet restore --use-current-runtime  
+COPY ./aspnetapp/*.csproj .
+RUN dotnet restore --use-current-runtime  
 
 # copy everything else and build app
 COPY aspnetapp/. .
