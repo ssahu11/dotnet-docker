@@ -15,7 +15,7 @@ RUN cd samples/aspnetapp/aspnetapp/
 #COPY aspnetapp/*.csproj ./aspnetapp/
 #RUN dotnet restore
 #RUN cd //aspnetapp
-#COPY ./aspnetapp/*.csproj .
+COPY aspnetapp.csproj .
 RUN dotnet restore --use-current-runtime  
 
 # copy everything else and build app
