@@ -6,11 +6,14 @@ WORKDIR /source
 # copy csproj and restore as distinct layers
 COPY . .
 RUN dir
-WORKDIR /source/aspnetapp
+#WORKDIR /source/
 
+COPY *.sln .
+COPY aspnetapp/*.csproj ./aspnetapp/
+RUN dotnet restore
 #RUN cd //aspnetapp
 #COPY ./aspnetapp/*.csproj .
-RUN dotnet restore --use-current-runtime  
+#RUN dotnet restore --use-current-runtime  
 
 # copy everything else and build app
 COPY aspnetapp/. .
