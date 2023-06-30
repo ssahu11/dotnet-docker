@@ -20,7 +20,7 @@ WORKDIR /source/samples/aspnetapp/aspnetapp
 RUN dotnet restore --use-current-runtime  
 
 # copy everything else and build app
-COPY aspnetapp/. .
+#COPY aspnetapp/. .
 RUN dotnet publish --use-current-runtime --self-contained false --no-restore -o /app
 
 
