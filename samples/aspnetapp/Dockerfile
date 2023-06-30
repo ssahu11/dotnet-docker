@@ -8,7 +8,7 @@ WORKDIR /source
 COPY . .
 RUN dir
 RUN cd samples/aspnetapp/
-RUN dir
+RUN dir samples/aspnetapp/
 #WORKDIR /source/
 
 #COPY *.sln .
