@@ -4,7 +4,7 @@ FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /source
 
 # copy csproj and restore as distinct layers
-COPY aspnetapp/*.csproj .
+COPY ./aspnetapp/*.csproj .
 RUN dotnet restore --use-current-runtime  
 
 # copy everything else and build app
